@@ -14,7 +14,7 @@ const buyTwo = document.getElementById('buybtntwo')
 const priceTwo = document.getElementById('priceTwo')
 
 
-let count = 1000000
+let count = 0
 let farmcount = 0
 let price = 100
 let priceTwoUp = 140
