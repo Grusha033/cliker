@@ -12,14 +12,53 @@ const farmplus = document.getElementById('farmplus')
 const clickup = document.getElementById('clickup')
 const buyTwo = document.getElementById('buybtntwo')
 const priceTwo = document.getElementById('priceTwo')
+const remove = document.getElementById('remove')
+const removetabl = document.getElementById('delid')
+const yes = document.getElementById('yes')
+const no = document.getElementById('no')
 
+let storageMoney = localStorage.getItem('money')
+let storageEscalator = localStorage.getItem('eskalator')
+let storageClicks = localStorage.getItem('clickscounts')
+let storageOnePrice = localStorage.getItem('tovarONEprice')
+let storageTWOPrice = localStorage.getItem('tovarTWOprice')
 
-let count = 0
-let farmcount = 0
-let price = 100
-let priceTwoUp = 140
-let clickUp = 1
+farm.textContent = parseInt(storageEscalator)
+clickup.textContent = parseInt(storageClicks)
+plus.textContent = ('+' + parseInt(storageClicks))
+priceup.textContent = ('Цена: ' + parseInt(storageOnePrice))
+priceTwo.textContent = ('Цена: ' + parseInt(storageTWOPrice))
 
+let count = parseInt(storageMoney)
+let farmcount = parseInt(storageEscalator)
+let price = parseInt(storageOnePrice)
+let priceTwoUp = parseInt(storageTWOPrice)
+let clickUp = parseInt(storageClicks)
+
+removetabl.style.left = '30000px'
+
+if (isNaN(count)) {
+    count = 0
+}
+if (isNaN(farmcount)) {
+    farmcount = 0
+    farm.textContent = 0
+}
+if (isNaN(clickUp)) {
+    clickUp = 1
+    clickup.textContent = 1
+    plus.textContent = ('+1')
+}
+if (isNaN(price)) {
+    price = 80
+    priceup.textContent = ('Цена: 80')
+}
+if (isNaN(priceTwoUp)) {
+    priceTwoUp = 90
+    priceTwo.textContent = ('Цена: 90')
+}
+
+money.textContent = count
 shop.style.left = '30000px'
 
 clickbutton.onclick = () => {
@@ -87,4 +126,29 @@ setInterval ( () => {
             farmplus.style.opacity = "0%"
         },300)
     }
-}, 1000)
+}, 800)
+
+setInterval ( () => {
+    localStorage.setItem('money', Math.round(count))
+    localStorage.setItem('eskalator', Math.round(farmcount))
+    localStorage.setItem('clickscounts', Math.round(clickUp))
+
+    localStorage.setItem('tovarONEprice', Math.round(price))
+    localStorage.setItem('tovarTWOprice', Math.round(priceTwoUp))
+}, 100)
+
+remove.onclick = () => {
+    if (removetabl.style.left === '30000px') {
+        removetabl.style.left = '90px'
+    } else {
+        removetabl.style.left = '30000px'
+    }
+} 
+
+no.onclick = () => {
+    removetabl.style.left = '30000px'
+}
+yes.onclick = () => {
+    localStorage.clear()
+    location.reload()
+}
