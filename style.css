@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .clickbtn-cont {
@@ -32,7 +33,7 @@
 }
 
 .clickbtn:hover {
-    background-color: rgb(179, 51, 68);
+    transform: rotate(300deg);
     transition: 10s;
 }
 
@@ -101,8 +102,9 @@
 }
 
 .shop {
-    position: absolute;
-    top: 410px;
+    position: fixed;
+    /* top: 410px; */
+    bottom: 10px;
     width: 400px;
     height: 300px;
     background-color: rgb(233, 233, 233);
@@ -187,4 +189,41 @@
     padding: 8px 8px;
     border-radius: 5px;
     margin-left: 20px;
+}
+
+.second-earth-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.second-earth {
+    /* padding-left: 350px; */
+    opacity: 0%;
+    transition: .5s;
+    position: absolute;
+}
+
+.second-earth-png {
+    width: 100px;
+    height: 100px;
+}
+
+.second-plus {
+    font-family: 'Russo One', sans-serif;
+    padding-left: 165px;
+    position: fixed;
+    transition: .5s;
+}
+
+#planetAnim {
+    padding-left: 350px;
+    padding-top: 5px;
+    transition: .3s;
+}
+
+#topmationJS {
+    opacity: 0%;
+    position: absolute;
+    top: 480px;
+    transition: .5s;    
 }
