@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Кликер</title>
+    <title id="nameCounter">Кликер</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/587/587335.png">
 </head>
@@ -12,19 +12,26 @@
         <img class="money-png" src="https://pngimg.com/uploads/coin/coin_PNG36868.png"><p id="clickcounter" class="money">0</p>
         <img class="money-png" src="https://cdn-icons-png.flaticon.com/512/2180/2180517.png"><p id="autofarm" class="money">0</p>
         <img class="money-png" src="https://cdn-icons-png.flaticon.com/512/1828/1828378.png"><p id="clickup" class="money">1</p>
+        <img class="money-png" src="https://cdn.icon-icons.com/icons2/2481/PNG/512/planet_icon_149820.png"><p id="planeteUP" class="money">0</p>
         </span>
         <span  id="cart" class="info-bg-cart"><img src="https://cdn-icons-png.flaticon.com/512/117/117641.png"class="money-png-cart"></span>
     </div>
     <div class="clickbtn-cont">
         <p id="farmplus" class="clickplus-farm">+1</p>
-        <div id="clickbutton" class="clickbtn border"></div>
+        <div id="clickbutton" class="clickbtn border" style="display: flex; justify-content: center; background-color: black;"><img src="https://cdn-icons-png.flaticon.com/512/616/616616.png"></div>
         <span class="topmation" id="topmationjs"><p id="plusone" class="clickplus">+1</p></span>  
+    </div>
+
+    <div class="second-earth-cont">
+        <div id="secondEarth" class="second-earth"><img id="planetAnim" class="second-earth-png" src="https://cdn-icons-png.flaticon.com/512/3336/3336008.png"></div>
+        <span id="topmationJS"><p id="earthPay" class="second-plus">+0</p></span>
     </div>
 
     <div class="shop-cont">
         <div id="shopLabel" class="shop">
             <div id="buybtnone" class="cell-shop"><img class="shop-img" src="https://cdn-icons-png.flaticon.com/512/108/108293.png"><p id="price" class="shop-cost">Цена: 100</p></div>
             <div id="buybtntwo" class="cell-shop"><img class="shop-img" src="https://www.freeiconspng.com/thumbs/click-png/hands-click-png-icon-5.png"><p id="priceTwo" class="shop-cost">Цена: 140</p></div>
+            <div id="buybtntree" class="cell-shop"><img class="shop-img" src="https://cdn.icon-icons.com/icons2/2479/PNG/512/planet_icon_149787.png"><p id="priceTreeShop" class="shop-cost">Цена: 50000</p></div>
         </div>
     </div>
 
